@@ -16,7 +16,7 @@ function Login() {
         console.log(email, password);
 
         try {
-            const response = await axios.post('http://localhost:3001/login',
+            const response = await axios.post('http://localhost:3333/login',
                 JSON.stringify({ email, password }),
                 {
                     headers: { 'Content-Type': 'application/json' }
@@ -61,9 +61,16 @@ function Login() {
                         <button type="submit"
                             className='btn-login'
                             onClick={(e) => handleLogin(e)}>Login</button>
+
+                        <div>
+                            <span className="container1">Não possui conta?<Link to="/cadastro" >Criar conta </Link></span>
+
+                        </div>
                     </form>
                     <p>{error}</p>
                 </div>
+
+
             ) : (
                 <div>
                     <h1>Ola, {user.name}</h1>

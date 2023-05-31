@@ -1,12 +1,16 @@
 import express, { Request, Response, NextFunction } from 'express'
 import 'express-async-errors'
 import { router } from './routes';
+
 const app = express();
+
 app.use(express.json())
+
 app.use(router);
+
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     if (err instanceof Error) {
-        //se for uma instãncia de Error - Vou laçar
+        //se for uma instãncia de Error - Vou lançar
         return res.status(400).json({
             error: err.message
         })

@@ -1,7 +1,11 @@
 import { Router, Request, Response } from 'express';
 import { CreateUserController } from './controllers/user/CreateUserController';
+import { CreateUserService, LoginUserController } from './services/user/CreateUserService';
+
+
 const router = Router();
-//note que podemos tipar (typescript): req e do tipo "Request" e res é do tipo "Response"
+
+const createUserController = new CreateUserController();
 
 router.get('/teste', (req: Request, res: Response) => {
 
@@ -9,7 +13,8 @@ router.get('/teste', (req: Request, res: Response) => {
 
 })
 
-//Nova rota
-//Rotas USER ------------
-router.post('/users',new CreateUserController().handle)
+router.post('/userinsert',new CreateUserController().handle)
+
+router.post('/login',new LoginUserController().handle)
+
 export { router }

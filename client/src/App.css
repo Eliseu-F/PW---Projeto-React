@@ -53,6 +53,21 @@ a:active:hover {
   box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
 }
 
+.cadastro-form-wrap {
+  background-color: #fff;
+  width: 70%;
+  max-width: 400px;
+  margin: 30px auto;
+  text-align: center;
+  padding: 20px 0 0 0;
+  border-radius: 4px;
+  box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
+}
+
+.cadastro-form {
+  padding: 0 60px;
+}
+
 .login-form {
   padding: 0 60px;
 }
@@ -67,6 +82,7 @@ input {
   border-radius: 4px;
 }
 
+input[type="nome"],
 input[type="password"],
 input[type="email"] {
   width: 100%;
@@ -83,10 +99,31 @@ input[type="email"] {
   display: inline-block;
   background: none;
 }
-
+input[type="nome"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus {
   border-color: #3ca9e2;
+}
+
+.btn-cadastro {
+  border: none;
+  display: block;
+  background-color: #3ca9e2;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  width: 100%;
+  padding: 20px;
 }
 
 .btn-login {
@@ -109,6 +146,11 @@ input[type="email"]:focus {
   width: 100%;
   padding: 20px;
 }
+.btn-cadastro:hover {
+  background-color: #329dd5;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
 
 .btn-login:hover {
   background-color: #329dd5;
@@ -119,3 +161,7 @@ input[type="email"]:focus {
 header.container6 {
   background: rgb(0, 238, 255);
   position: top; }
+
+  span.container1 {
+    font-size: 20px;
+  }
