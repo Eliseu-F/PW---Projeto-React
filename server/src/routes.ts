@@ -14,7 +14,7 @@ router.get('/teste', (req: Request, res: Response) => {
 })
 
 router.post('/userinsert',new CreateUserController().handle)
-
+router.post('/gerenciar')
 router.post('/login',new LoginUserController().handle)
 
 export { router }

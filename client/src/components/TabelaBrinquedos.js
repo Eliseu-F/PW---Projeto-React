@@ -67,7 +67,7 @@ function TabelaBrinquedos({ props }) {
                     {linhasTabela}
                 </tbody>
             </table>
-            <button><Link to={'/produto'}>Adicionar</Link></button>
+            <button type="button" class="btn btn-primary" ><Link to={'/produto'}>Adicionar</Link></button>
         </div>
     )
 }

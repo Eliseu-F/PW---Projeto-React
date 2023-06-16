@@ -8,9 +8,13 @@ function MenuBusca(){
     return(
         <div>
             <h1>ToyStore</h1>
+            <header>
             <p>Brinquedos para todas as idades: Encontre diversão na ToyStore!</p>
-            <input type="text" id="inputBusca" placeholder="Encotre o brinquedo perfeito :D" style={{width: '400px'}}/>
-            <button onClick={buscarBrinquedo}>Buscar</button>
+            <div class="input-group mb-3">
+            <input class="input-group-text" type="text" id="inputBusca" placeholder="Encotre o brinquedo perfeito :D" style={{width: '400px'}}/>
+            <button type="button" class="btn btn-primary" onClick={buscarBrinquedo}>Buscar</button>
+            </div>
+            </header>
         </div>
 
         

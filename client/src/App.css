@@ -2,7 +2,7 @@ body {
   background-color: #9f9da7;
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
-  color: #2b3e51;
+  color: #000000;
 }
 
 header {
@@ -19,6 +19,7 @@ h2 {
   font-weight: 300;
   text-align: center;
 }
+
 
 a,
 a:link,
@@ -43,7 +44,7 @@ a:active:hover {
 }
 
 .login-form-wrap {
-  background-color: #fff;
+  background-color: #fdfdfd;
   width: 70%;
   max-width: 400px;
   margin: 30px auto;
@@ -164,4 +165,8 @@ header.container6 {
 
   span.container1 {
     font-size: 20px;
+  }
+
+  header.right {
+    text-align: right
   }
