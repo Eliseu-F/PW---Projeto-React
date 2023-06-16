@@ -68,24 +68,54 @@ function Produto() {
     }
 
     return (
-        <div>
-            <div>
-                <h1>Produto</h1>
-                <p>Id do produto: {id}</p>
-                <p>Descrição: </p>
-                <input type="text" value={dadosBackend.descricao || ''} onChange={(e) => setDadosBackend({ ...dadosBackend, descricao: e.target.value })} />
-                <p>Marca: </p>
-                <input type="text" value={dadosBackend.marca || ''} onChange={(e) => setDadosBackend({ ...dadosBackend, marca: e.target.value })} />
-                <p>Valor: </p>
-                <input type="text" value={dadosBackend.preco || ''} onChange={(e) => setDadosBackend({ ...dadosBackend, preco: e.target.value })} />
-            </div>
-            <div>
-                <button onClick={salvar}>Salvar</button>
-                <button>Cancelar</button>
-            </div>
 
+        <header className="header">
+      <div className="produto-form-wrap">
+        <div>
+          <h2>
+            <h1>Produto</h1>
+            <p>Id do produto: {id}</p>
+            <p>Descrição: </p>
+            <input
+              type="text"
+              className="form-input"
+              value={dadosBackend.descricao || ''}
+              onChange={(e) =>
+                setDadosBackend({ ...dadosBackend, descricao: e.target.value })
+              }
+            />
+            <p>Marca: </p>
+            <input
+              type="text"
+              className="form-input"
+              value={dadosBackend.marca || ''}
+              onChange={(e) =>
+                setDadosBackend({ ...dadosBackend, marca: e.target.value })
+              }
+            />
+            <p>Valor: </p>
+            <input
+              type="text"
+              className="form-input"
+              value={dadosBackend.preco || ''}
+              onChange={(e) =>
+                setDadosBackend({ ...dadosBackend, preco: e.target.value })
+              }
+            />
+          </h2>
         </div>
-    )
+
+        <div>
+          <button type="button" className="btn btn-primary" onClick={salvar}>
+            Salvar
+          </button>
+          <button type="button" className="btn btn-primary">
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </header>
+  );
 }
 
 export default Produto;

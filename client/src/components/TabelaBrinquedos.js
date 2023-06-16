@@ -41,34 +41,36 @@ function TabelaBrinquedos({ props }) {
     });
 
     return (
-        <div>
-            <h2>Gerenciar Brinquendos em Estoque:</h2>
-            <table style={{ borderCollapse: 'collapse', width: '60%' }}>
-                <thead>
-                    <tr style={{ border: '1px solid black', padding: '8px' }}>
-                        <td style={{ border: '1px solid black', padding: '8px' }}>
-                            ID
-                        </td>
-                        <td style={{ border: '1px solid black', padding: '8px' }}>
-                            Descrição
-                        </td>
-                        <td style={{ border: '1px solid black', padding: '8px' }}>
-                            Fabricante
-                        </td >
-                        <td style={{ border: '1px solid black', padding: '8px' }}>
-                            Valor
-                        </td>
-                        <td style={{ border: '1px solid black', padding: '8px' }}>
-                            Gerenciar
-                        </td>
-                    </tr>
-                </thead>
-                <tbody id="tbody">
-                    {linhasTabela}
-                </tbody>
-            </table>
-            <button type="button" class="btn btn-primary" ><Link to={'/produto'}>Adicionar</Link></button>
-        </div>
+        <header className="header">
+            <div className="produto-form-wrap">
+                <h2>Gerenciar Brinquendos em Estoque:</h2>
+                <table style={{ borderCollapse: 'collapse', width: '60%' }}>
+                    <thead>
+                        <tr style={{ border: '1px solid black', padding: '8px' }}>
+                            <td style={{ border: '1px solid black', padding: '8px' }}>
+                                ID
+                            </td>
+                            <td style={{ border: '1px solid black', padding: '8px' }}>
+                                Descrição
+                            </td>
+                            <td style={{ border: '1px solid black', padding: '8px' }}>
+                                Fabricante
+                            </td >
+                            <td style={{ border: '1px solid black', padding: '8px' }}>
+                                Valor
+                            </td>
+                            <td style={{ border: '1px solid black', padding: '8px' }}>
+                                Gerenciar
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        {linhasTabela}
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-primary" ><Link to={'/produto'}>Adicionar</Link></button>
+            </div>
+        </header>
     )
 }
 
